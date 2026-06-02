@@ -41,4 +41,18 @@ You can block any other user, which hides their content from you.
 - **Deletion:** You can permanently delete your account at any time from Profile → Delete Account. This removes your account, posts, group memberships, and stats. Some data may persist in encrypted backups for up to 30 days before being purged.
 - **California, EU, and UK residents:** You have additional rights under CCPA, GDPR, and UK GDPR including the right to request a copy of your data, restrict processing, or lodge a complaint with your local data protection authority. Contact us at the email below to exercise these rights.
 
-## Children
+## Children's Privacy
+
+Fairway Feed is rated for users 13 and older. We do not knowingly collect information from children under 13. If you believe a child under 13 has provided us with personal information, please contact us and we will delete it.
+
+## Content Moderation
+
+We allow users to report inappropriate content and block other users. We review reports within 24 hours and may remove content or terminate accounts that violate our Terms of Use.
+
+## Changes to This Policy
+
+We may update this policy from time to time. We'll post the new version here with an updated effective date.
+
+## Contact
+
+Questions? Email info@badapps.info.
