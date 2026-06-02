@@ -1,12 +1,12 @@
 # Terms of Use (EULA)
 
-**Effective Date:** [TODAY'S DATE]
+**Effective Date:** June 1, 2026
 
 Welcome to Fairway Feed. By creating an account or using the App, you agree to these terms. If you don't agree, please don't use the App.
 
 ## Who We Are
 
-Fairway Feed is operated by [YOUR LLC NAME OR YOUR NAME] ("we", "us", "our"). Contact: [YOUR EMAIL].
+Fairway Feed is operated by Bad Apps LLC ("we", "us", "our"). Contact: info@badapps.info.
 
 ## Eligibility
 
@@ -76,4 +76,4 @@ These terms are governed by the laws of the State of Illinois, without regard to
 
 ## Contact
 
-Questions? Email [YOUR EMAIL].
+Questions? Email info@badapps.info.
