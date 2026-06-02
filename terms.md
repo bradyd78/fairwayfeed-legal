@@ -74,6 +74,9 @@ We may update these terms from time to time. We'll post the new version here wit
 
 These terms are governed by the laws of the State of Illinois, without regard to conflict-of-law principles. Any dispute must be brought in the state or federal courts located in Illinois.
 
+## Privacy Policy
+Your use of the App is also governed by our Privacy Policy at badapp.info/privacy.
+
 ## Contact
 
 Questions? Email info@badapps.info.
