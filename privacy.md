@@ -1,8 +1,8 @@
 # Privacy Policy
 
-**Effective Date:** [TODAY'S DATE, e.g. May 31, 2026]
+**Effective Date:** June 1, 2026
 
-[YOUR LLC NAME OR YOUR NAME] ("we", "us", "our") operates the Fairway Feed mobile application (the "App"). This Privacy Policy explains what information we collect, how we use it, and what rights you have.
+Bad Apps LLC ("we", "us", "our") operates the Fairway Feed mobile application (the "App"). This Privacy Policy explains what information we collect, how we use it, and what rights you have.
 
 ## Information We Collect
 
