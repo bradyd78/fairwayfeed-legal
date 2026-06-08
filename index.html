@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fairway Feed - Legal Documents</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #1a5e3b 0%, #2d8659 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 900px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1a5e3b 0%, #2d8659 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .tabs {
+            display: flex;
+            background: #f5f5f5;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .tab-button {
+            flex: 1;
+            padding: 18px 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            color: #666;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .tab-button:hover {
+            background: rgba(26, 94, 59, 0.1);
+            color: #1a5e3b;
+        }
+
+        .tab-button.active {
+            color: #1a5e3b;
+            background: white;
+        }
+
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(135deg, #1a5e3b 0%, #2d8659 100%);
+        }
+
+        .content {
+            padding: 40px;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .tab-pane {
+            display: none;
+        }
+
+        .tab-pane.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .tab-pane h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        .tab-pane .effective-date {
+            color: #999;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .tab-pane h3 {
+            color: #1a5e3b;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+
+        .tab-pane p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .tab-pane ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .tab-pane ul li {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .tab-pane strong {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .footer {
+            background: #f5f5f5;
+            padding: 20px 30px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .footer a {
+            color: #1a5e3b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Scrollbar styling */
+        .content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .content::-webkit-scrollbar-thumb {
+            background: #1a5e3b;
+            border-radius: 4px;
+        }
+
+        .content::-webkit-scrollbar-thumb:hover {
+            background: #2d8659;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .tab-button {
+                padding: 14px 16px;
+                font-size: 0.95em;
+            }
+
+            .content {
+                padding: 25px;
+                max-height: 500px;
+            }
+
+            .tab-pane h2 {
+                font-size: 1.5em;
+            }
+
+            .tab-pane h3 {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Fairway Feed</h1>
+            <p>Legal Documents</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="switchTab('privacy')">Privacy Policy</button>
+            <button class="tab-button" onclick="switchTab('terms')">Terms of Service</button>
+        </div>
+
+        <div class="content">
+            <div id="privacy" class="tab-pane active">
+                <h2>Privacy Policy</h2>
+                <p class="effective-date"><strong>Effective Date:</strong> June 1, 2026</p>
+
+                <p>Bad Apps LLC ("we", "us", "our") operates the Fairway Feed mobile application (the "App"). This Privacy Policy explains what information we collect, how we use it, and what rights you have.</p>
+
+                <h3>Information We Collect</h3>
+                <p><strong>Account information:</strong> When you sign up, we collect your email address and a display name you choose.</p>
+                <p><strong>Content you create:</strong> Posts, photos, group memberships, chat messages, and stats (handicap, best score, holes played) you enter or generate in the App.</p>
+                <p><strong>Technical information:</strong> Device type and version of the App you're using, collected automatically by our backend provider (Firebase) to help us diagnose issues.</p>
+                <p>We do <strong>not</strong> collect location data, contacts, biometric data, browsing history outside the App, or any tracking identifiers for advertising purposes.</p>
+
+                <h3>How We Use Information</h3>
+                <p>We use the information you provide to:</p>
+                <ul>
+                    <li>Operate the App (sign you in, show your posts to your groups, build the leaderboard)</li>
+                    <li>Respond to user reports and moderate inappropriate content</li>
+                    <li>Communicate with you about your account if needed</li>
+                    <li>Improve and debug the App</li>
+                </ul>
+                <p>We do not sell your personal information. We do not share it with advertisers.</p>
+
+                <h3>Data Storage and Processing</h3>
+                <p>The App uses Google Firebase (Authentication, Firestore, Cloud Storage) as its backend. Your data is stored on Google's servers, which are governed by Google's privacy and security practices.</p>
+
+                <h3>Sharing With Other Users</h3>
+                <p>Content you post to a group is visible to other members of that group. Chat messages in a group are visible to other members of that group. Your display name and stats are visible on group leaderboards.</p>
+                <p>You can block any other user, which hides their content from you.</p>
+
+                <h3>Your Rights</h3>
+                <ul>
+                    <li><strong>Access:</strong> You can see all of your data within the App itself.</li>
+                    <li><strong>Correction:</strong> You can edit your display name, stats, and posts in the App.</li>
+                    <li><strong>Deletion:</strong> You can permanently delete your account at any time from Profile → Delete Account. This removes your account, posts, group memberships, and stats.</li>
+                    <li><strong>California, EU, and UK residents:</strong> You have additional rights under CCPA, GDPR, and UK GDPR including the right to request a copy of your data, restrict processing, or lodge a complaint with your local data protection authority.</li>
+                </ul>
+
+                <h3>Children's Privacy</h3>
+                <p>Fairway Feed is rated for users 13 and older. We do not knowingly collect information from children under 13. If you believe a child under 13 has provided us with personal information, please contact us immediately.</p>
+
+                <h3>Content Moderation</h3>
+                <p>We allow users to report inappropriate content and block other users. We review reports within 24 hours and may remove content or terminate accounts that violate our Terms of Use.</p>
+
+                <h3>Changes to This Policy</h3>
+                <p>We may update this policy from time to time. We'll post the new version here with an updated effective date.</p>
+
+                <h3>Contact</h3>
+                <p>Questions? Email <strong>info@badapps.info</strong></p>
+            </div>
+
+            <div id="terms" class="tab-pane">
+                <h2>Terms of Service</h2>
+                <p class="effective-date"><strong>Effective Date:</strong> June 1, 2026</p>
+
+                <p>Welcome to Fairway Feed. By creating an account or using the App, you agree to these terms. If you don't agree, please don't use the App.</p>
+
+                <h3>Who We Are</h3>
+                <p>Fairway Feed is operated by Bad Apps LLC ("we", "us", "our"). Contact: <strong>info@badapps.info</strong></p>
+
+                <h3>Eligibility</h3>
+                <p>You must be at least 13 years old to use Fairway Feed. By signing up, you confirm you are 13 or older.</p>
+
+                <h3>Your Account</h3>
+                <p>You're responsible for keeping your password safe and for everything that happens under your account. Don't share your account with others. Notify us right away if you suspect unauthorized access.</p>
+
+                <h3>Acceptable Use</h3>
+                <p>When you use Fairway Feed, you agree NOT to:</p>
+                <ul>
+                    <li>Post content that is illegal, threatening, harassing, defamatory, obscene, hateful, or violent</li>
+                    <li>Post sexually explicit content or content that exploits minors</li>
+                    <li>Impersonate another person</li>
+                    <li>Spam, scrape, or attempt to access the App through automated means</li>
+                    <li>Reverse-engineer, decompile, or attempt to extract source code</li>
+                    <li>Use the App for any commercial purpose without our permission</li>
+                </ul>
+                <p>We reserve the right to remove content or terminate accounts that violate these terms, at our sole discretion.</p>
+
+                <h3>Your Content</h3>
+                <p>You retain ownership of the content you post (photos, captions, chat messages, etc.). By posting, you grant us a non-exclusive, worldwide, royalty-free license to host, display, and distribute your content within the App.</p>
+                <p>You're solely responsible for the content you post. You represent that you have all necessary rights to post it and that it doesn't violate anyone else's rights.</p>
+
+                <h3>Content Moderation and Reporting</h3>
+                <p>We rely on user reports to identify problematic content. You agree to use the in-app Report feature for content that violates these terms. We aim to review reports within 24 hours and take appropriate action.</p>
+                <p>We are not obligated to monitor all content, but we have the right to do so.</p>
+
+                <h3>Account Termination</h3>
+                <p>You can delete your account at any time from Profile → Delete Account. We can terminate or suspend your account if you violate these terms or for any other reason, at our sole discretion.</p>
+
+                <h3>No Warranty</h3>
+                <p>The App is provided "as-is" without warranties of any kind, express or implied. We don't guarantee that the App will be uninterrupted, secure, or error-free.</p>
+
+                <h3>Limitation of Liability</h3>
+                <p>To the maximum extent permitted by law, we are not liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the App.</p>
+
+                <h3>Indemnification</h3>
+                <p>You agree to indemnify and hold us harmless from any claims, damages, or expenses (including legal fees) arising from your content, your use of the App, or your violation of these terms.</p>
+
+                <h3>Apple App Store Additional Terms</h3>
+                <p>If you're using Fairway Feed on iOS:</p>
+                <ul>
+                    <li>These Terms are between you and us, not between you and Apple.</li>
+                    <li>Apple is not responsible for the App or its content.</li>
+                    <li>Apple has no obligation to provide support for the App.</li>
+                    <li>In the event of any failure of the App to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price (if any) to you.</li>
+                    <li>To the maximum extent permitted by law, Apple has no other warranty obligation whatsoever with respect to the App.</li>
+                    <li>Apple and Apple's subsidiaries are third-party beneficiaries of these Terms.</li>
+                </ul>
+
+                <h3>Changes to These Terms</h3>
+                <p>We may update these terms from time to time. We'll post the new version here with an updated effective date. Continued use of the App after changes means you accept the new terms.</p>
+
+                <h3>Governing Law</h3>
+                <p>These terms are governed by the laws of the State of Illinois, without regard to conflict-of-law principles. Any dispute must be brought in the state or federal courts located in Illinois.</p>
+
+                <h3>Contact</h3>
+                <p>Questions? Email <strong>info@badapps.info</strong></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Bad Apps LLC. All rights reserved. | <a href="mailto:info@badapps.info">Contact Us</a></p>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tabName) {
+            // Hide all tab panes
+            const panes = document.querySelectorAll('.tab-pane');
+            panes.forEach(pane => pane.classList.remove('active'));
+
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            // Show selected tab pane
+            document.getElementById(tabName).classList.add('active');
+
+            // Add active class to clicked button
+            event.target.classList.add('active');
+
+            // Scroll content to top
+            document.querySelector('.content').scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
